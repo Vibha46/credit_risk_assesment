@@ -594,7 +594,7 @@ with tab4:
 
         if len(similar):
             st.dataframe(
-                similar.style.applymap(
+                similar.style.map(
                     lambda v: "background-color: #d4edda"
                     if v == "Good"
                     else "background-color: #f8d7da"
@@ -645,7 +645,7 @@ with tab5:
         "Checking account", "Credit amount", "Duration", "Purpose", "Risk_Label",
     ]
     st.dataframe(
-        filtered[display_cols].style.applymap(
+        filtered[display_cols].style.map(
             lambda v: "background-color: #d4edda"
             if v == "Good"
             else "background-color: #f8d7da"
